@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portofolio Alfian Panji Syahputra — Sistem Informasi, backend development, dan database." />
+  <title>Alfian Panji Syahputra | Portofolio</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: "#073B5B",
+            blue: "#0B5278",
+            skysoft: "#EAF4FA",
+            yellow: "#F7D65A",
+            cream: "#FFF9E8",
+            ink: "#163247"
+          },
+          fontFamily: {
+            display: ["Poppins", "sans-serif"],
+            body: ["Inter", "sans-serif"]
+          },
+          boxShadow: {
+            soft: "0 18px 50px rgba(7, 59, 91, 0.10)"
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=welcome-smooth" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  
+</head>
+<body class="font-body text-ink antialiased overflow-hidden">
+  <section id="welcome-screen" class="fixed inset-0 z-[100] overflow-y-auto bg-[#fbfdff] px-5 py-8 sm:px-8 sm:py-10" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+    <div class="pointer-events-none absolute inset-0 opacity-60" style="background-image: linear-gradient(rgba(7,59,91,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(7,59,91,.08) 1px, transparent 1px); background-size: 47px 47px;"></div>
+    <div class="pointer-events-none absolute left-[45%] top-[12%] h-5 w-5 rounded-full bg-yellow"></div>
+    <div class="pointer-events-none absolute right-[6%] top-[12%] text-5xl text-orange-600">✦</div>
+    <div class="relative mx-auto grid min-h-[calc(100svh-5rem)] max-w-6xl items-center gap-10 sm:grid-cols-[1.1fr_.9fr]">
+      <div class="relative z-10">
+        <div class="relative inline-block border-2 border-violet-500 px-3 py-2 sm:px-4 sm:py-3">
+          <h1 id="welcome-title" class="font-display text-5xl font-extrabold uppercase leading-[.9] tracking-[-.07em] text-navy sm:text-6xl lg:text-7xl">
+            Professional<br />Portofolio
+          </h1>
+        </div>
+        <p class="mt-7 inline-flex max-w-full rounded-lg bg-navy px-5 py-4 font-display text-lg font-semibold uppercase tracking-[.12em] text-white sm:px-8 sm:text-xl">
+          Alfian Panji Syahputra
+        </p>
+        <button id="enter-portfolio" type="button" class="mt-6 inline-flex items-center gap-2 rounded-full bg-yellow px-6 py-3.5 text-sm font-bold text-navy shadow-soft transition hover:-translate-y-1 hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2">
+          Lihat Portofolio <span aria-hidden="true">↓</span>
+        </button>
+      </div>
+      <div class="relative mx-auto flex w-full max-w-sm justify-center">
+        <div class="pointer-events-none absolute -left-4 top-8 h-28 w-28 rounded-full bg-yellow/60 blur-2xl"></div>
+        <div class="pointer-events-none absolute -right-4 bottom-8 h-28 w-28 rounded-full bg-sky-200/80 blur-2xl"></div>
+        <div class="dot-pattern pointer-events-none absolute -right-5 top-6 h-32 w-32 opacity-70"></div>
+        <img src="assets/profile-transparent.png" alt="Foto Alfian Panji Syahputra" class="relative h-[300px] w-full max-w-[330px] rounded-t-full border-2 border-yellow object-cover object-top shadow-soft sm:h-[400px] lg:h-[440px]" />
+        <span class="pointer-events-none absolute -bottom-3 left-2 text-4xl text-emerald-600">✦</span>
+        <span class="pointer-events-none absolute right-0 top-[55%] h-5 w-5 rounded-full bg-navy"></span>
+      </div>
+    </div>
+  </section>
+  <div data-include="partials/header.html"></div>
+  <main>
+    <div data-include="partials/hero.html"></div>
+    <div data-include="partials/education.html"></div>
+    <div data-include="partials/skills.html"></div>
+    <div data-include="partials/projects.html"></div>
+    <div data-include="partials/contact.html"></div>
+  </main>
+  <div data-include="partials/footer.html"></div>
+  <p id="include-error" class="m-6 hidden rounded-xl border border-red-300 bg-red-50 p-4 text-red-800" role="alert"></p>
+  <script src="js/main.js?v=content-move-smooth"></script>
+</body>
+</html>
